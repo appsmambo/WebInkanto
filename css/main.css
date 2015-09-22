@@ -1,0 +1,37 @@
+@font-face {
+	font-family:'TempusSansITC';
+	src:url('../fonts/TempusSansITC.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TempusSansITC.woff') format('woff'),
+		url('../fonts/TempusSansITC.ttf') format('truetype'),
+		url('../fonts/TempusSansITC.svg#TempusSansITC') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+	height:100%
+}
+body {
+	color:#fff;
+	font-family:'TempusSansITC';
+	font-size:13px;
+	padding-top:177px
+}
+body.inicio {
+	background-color:transparent;
+	background-image:url('../img/fondo.jpg');
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	background-attachment:fixed;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	overflow-x:hidden
+}
+
+.cabecera {
+	background-image:url('../img/fondo-cabecera.jpg');
+	background-repeat:no-repeat;
+	background-position:left top;
+}
