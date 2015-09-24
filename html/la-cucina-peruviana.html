@@ -39,6 +39,20 @@
 		<![endif]-->
 		<script src="http://www.inkanto.eu/staging/js/jquery.min.js"></script>
 		<script src="http://www.inkanto.eu/staging/js/bootstrap.min.js"></script>
+				<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script>
+			function initialize() {
+				var mapCanvas = document.getElementById('map');
+				var mapOptions = {
+					center: new google.maps.LatLng(45.449034, 9.176668),
+					zoom: 19,
+					scrollwheel: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+				var map = new google.maps.Map(mapCanvas, mapOptions)
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
 						<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -48,7 +62,7 @@
 			ga('send', 'pageview');
 		</script>
 	</head>
-	<body class="inicio">
+	<body class="la-cucina-peruviana">
 		<h1 class="hidden">cucina peruviana</h1>
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
@@ -71,38 +85,38 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class="active">
+						<li>
 							<a href="http://www.inkanto.eu/staging">
-								HOME <span class="sr-only">(current)</span>
+								HOME
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/il-ristorante">
+							<a href="http://www.inkanto.eu/staging/il-ristorante.html">
 								IL RISTORANTE
 							</a>
 						</li>
-						<li>
-							<a href="http://www.inkanto.eu/staging/la-cucina-peruviana">
-								LA CUCINA PERUVIANA
+						<li class="active">
+							<a href="http://www.inkanto.eu/staging/la-cucina-peruviana.html">
+								LA CUCINA PERUVIANA <span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/il-menu">
+							<a href="http://www.inkanto.eu/staging/il-menu.html">
 								IL MENÚ
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/gallery">
+							<a href="http://www.inkanto.eu/staging/gallery.html">
 								GALLERY
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/prenota">
+							<a href="http://www.inkanto.eu/staging/prenota.html">
 								PRENOTA
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/contatti">
+							<a href="http://www.inkanto.eu/staging/contatti.html">
 								CONTATTI
 							</a>
 						</li>
@@ -111,7 +125,13 @@
 			</div>
 		</nav>
 		<div class="container-fluid no-gutter">
-						<section class="cabecera hidden-xs">
+						<p class="visible-xs">
+				<br>
+				<a href="http://www.inkanto.eu/staging">
+					<img src="http://www.inkanto.eu/staging/img/logo.png" alt="" class="img-responsive pull-right">
+				</a>
+			</p>
+			<section class="cabecera hidden-xs">
 				<div class="container">
 					<h2 class="text-right">
 						RISTORANTE PERUVIANO
@@ -123,44 +143,69 @@
 							</a>
 						</p>
 						<div class="clearfix"></div>
-						<p class="text-right">
-							<a href="https://www.google.it/maps/place/Via+Emilio+Gola,+4,+20143+Milano/@45.4456308,9.1901226,15z/data=!4m2!3m1!1s0x4786c3f78fc6280f:0xb8178fc1d51db17c" target="_blank">
-								Via Emilio Gola 4, Milano - 20143
+						<p class="menu text-right">
+							<a href="http://www.inkanto.eu/staging/il-ristorante.html">
+								IL RISTORANTE
 							</a><br>
-							Tel: +39 02.83631695<br>
-							Cell: +39 340.5277352<br>
-							<a href="mailto:info@inkanto.eu">info@inkanto.eu</a> / <a href="http://www.inkanto.eu/staging">www.inkanto.eu</a><br>
-							Lunedí chiuso
+							<a href="http://www.inkanto.eu/staging/la-cucina-peruviana.html">
+								LA CUCINA PERUVIANA
+							</a><br>
+							<a href="http://www.inkanto.eu/staging/il-menu.html">
+								IL MENÚ
+							</a><br>
+							<a href="http://www.inkanto.eu/staging/gallery.html">
+								GALLERY
+							</a><br>
+							<a href="http://www.inkanto.eu/staging/prenota.html">
+								PRENOTA
+							</a><br>
+							<a href="http://www.inkanto.eu/staging/contatti.html">
+								CONTATTI
+							</a><br>
 						</p>
 					</div>
 				</div>
 			</section>
-			<section class="container cabecera-responsive visible-xs">
-				<p>
-					<a href="http://www.inkanto.eu/staging">
-						<img src="http://www.inkanto.eu/staging/img/logo.png" alt="" class="img-responsive pull-right">
-					</a>
-				</p>
-				<p class="text-center">
-					<br><br>
-					<a href="https://www.google.it/maps/place/Via+Emilio+Gola,+4,+20143+Milano/@45.4456308,9.1901226,15z/data=!4m2!3m1!1s0x4786c3f78fc6280f:0xb8178fc1d51db17c" target="_blank">
-						Via Emilio Gola 4, Milano - 20143
-					</a><br>
-					Tel: +39 02.83631695<br>
-					Cell: +39 340.5277352<br>
-					<a href="mailto:info@inkanto.eu">info@inkanto.eu</a> / <a href="http://www.inkanto.eu/staging">www.inkanto.eu</a><br>
-					Lunedí chiuso
-				</p>
-			</section>
 					</div>
 		<div class="container-fluid fondo-blanco" role="main">
 			<div class="container principal">
-				<h3>
-	<a href="http://www.inkanto.eu/staging/il-ristorante.html">
-		VIENI A SCOPRIRLA!! <img src="http://www.inkanto.eu/staging/img/boton.png" alt="">
-	</a>
-</h3>
+				<div class="row">
+	<div class="col-sm-11 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-8 col-lg-offset-2">
+		<p>
+			<img src="http://www.inkanto.eu/staging/img/cucina-peruviana.jpg" alt="" class="center-block img-responsive">
+		</p>
+		<p class="text-center big">
+			La cucina peruviana è una delle più variegate del mondo ed il Perù. Nella cucina peruviana si trovano almeno 5.000 anni di storia preincaica, incaica, coloniale e repubblicana. Si considerano quasi tre secoli di contributi culinari spagnoli, i costumi gastronomici importati dagli schiavi della costa atlantica africana e la forte influenza degli usi e costumi culinari degli chef francesi che fuggirono dalla Rivoluzione francese.<br><br>
+			Importante è stata anche l'influenza dei cinesi-cantonesi, giapponesi, italiani dal XIX secolo e altri europei. Questa miscela di tradizioni e culture culinarie fa sì che la cucina peruviana abbia l'esclusiva particolarità della coesistenza di cibi e sapori appartenenti a quattro continenti, e questo dalla seconda metà del XIX secolo.<br><br>
+			Grazie a questa ricca varietà e all'armonia dei suoi sapori e alimenti impiegati, la gastronomia peruviana è costantemente premiata a livello internazionale e i suoi chef ottengono spesso medaglie e prestigio internazionale.La cucina peruviana è una delle più variegate del mondo ed il Perù. Nella cucina peruviana si trovano almeno 5.000 anni di storia preincaica, incaica, coloniale e repubblicana. Si considerano quasi tre secoli di contributi culinari spagnoli, i costumi gastronomici importati dagli schiavi della costa atlantica africana e la forte influenza degli usi e costumi culinari degli chef francesi che fuggirono dalla Rivoluzione francese.
+		</p>
+	</div>
+</div>
 			</div>
+		</div>
+				<div class="container-fluid no-gutter">
+			<footer>
+				<p class="text-center">
+					ORARI DI APERTURA<br>
+					Lunedì Chiuso.<br>
+					Dal martedì al Giovedì dalle 18 alle 24<br>
+					Venerdì dalle 18 all' 1<br>
+					SABATO (Pranzo) dalle 12 alle 14:30<br>
+					SABATO (Cena) dalle 18 all'1<br>
+					DOMENICA dalle 11 alle 17
+				</p>
+				<div id="map"></div>
+				<p class="text-center">
+					<a href="https://www.google.it/maps/place/Via+Emilio+Gola,+4,+20143+Milano/@45.4456308,9.1901226,15z/data=!4m2!3m1!1s0x4786c3f78fc6280f:0xb8178fc1d51db17c" target="_blank">
+						Via Emilio Gola, 4 Milano 20143
+					</a><br>
+					Tel: +39 02.83631695<br>
+					Cell: +39 340.5277352<br>
+					E-mail: <a href="mailto:info@inkanto.eu">
+						info@inkanto.eu
+					</a>
+				</p>
+			</footer>
 		</div>
 			</body>
 </html>

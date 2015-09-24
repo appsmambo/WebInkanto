@@ -6,17 +6,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>cucina peruviana</title>
 		<meta name="description" content="cucina peruviana in Milano">
-		<link rel="canonical" href="{{url()}}">
-		<meta itemprop="image" content="">
+		<link rel="canonical" href="{{url()}}/">
+		<meta itemprop="image" content="{{url('img/logo.png')}}">
 		<meta itemprop="description" content="cucina peruviana in Milano">
 		<meta itemprop="name" content="cucina peruviana">
 		<!--meta property="fb:app_id" content="123456789"-->
 		<meta property="og:site_name" content="cucina peruviana">
 		<meta property="og:title" content="cucina peruviana">
-		<meta property="og:url" content="{{url()}}">
+		<meta property="og:url" content="{{url()}}/">
 		<meta property="og:type" content="website">
 		<meta property="og:description" content="cucina peruviana in Milano">
-		<meta property="og:image" content="">
+		<meta property="og:image" content="{{url('img/logo.png')}}">
 		<link href="{{url('css/bootstrap.min.css')}}" rel="stylesheet">
 		<link href="{{url('css/main.css')}}" rel="stylesheet">
 		<script src="{{url('js/queryloader2.min.js')}}"></script>
@@ -39,8 +39,23 @@
 		<![endif]-->
 		<script src="{{url('js/jquery.min.js')}}"></script>
 		<script src="{{url('js/bootstrap.min.js')}}"></script>
+		@if ($uri != '/')
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script>
+			function initialize() {
+				var mapCanvas = document.getElementById('map');
+				var mapOptions = {
+					center: new google.maps.LatLng(45.449034, 9.176668),
+					zoom: 19,
+					scrollwheel: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+				var map = new google.maps.Map(mapCanvas, mapOptions)
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		@endif
 		@yield('scripts')
-		<script src="{{url('js/main.js')}}"></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -52,6 +67,14 @@
 	</head>
 	<body class="{{$clase}}">
 		<h1 class="hidden">cucina peruviana</h1>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.4&appId=674146849380870";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<nav class="navbar navbar-default navbar-inverse visible-xs">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -113,14 +136,18 @@
 					</h2>
 					<div class="bienvenida">
 						<p>
-							<img src="{{url('img/logo.png')}}" alt="" class="img-responsive pull-right logo">
+							<a href="{{url()}}">
+								<img src="{{url('img/logo.png')}}" alt="" class="img-responsive pull-right logo">
+							</a>
 						</p>
 						<div class="clearfix"></div>
 						<p class="text-right">
-							Via Emilio Gola 4,  Milano - 20143<br>
+							<a href="https://www.google.it/maps/place/Via+Emilio+Gola,+4,+20143+Milano/@45.4456308,9.1901226,15z/data=!4m2!3m1!1s0x4786c3f78fc6280f:0xb8178fc1d51db17c" target="_blank">
+								Via Emilio Gola 4, Milano - 20143
+							</a><br>
 							Tel: +39 02.83631695<br>
 							Cell: +39 340.5277352<br>
-							info@inkanto.eu / www.inkanto.eu<br>
+							<a href="mailto:info@inkanto.eu">info@inkanto.eu</a> / <a href="{{url()}}">www.inkanto.eu</a><br>
 							Lunedí chiuso
 						</p>
 					</div>
@@ -128,18 +155,28 @@
 			</section>
 			<section class="container cabecera-responsive visible-xs">
 				<p>
-					<img src="{{url('img/logo.png')}}" alt="" class="img-responsive center-block">
+					<a href="{{url()}}">
+						<img src="{{url('img/logo.png')}}" alt="" class="img-responsive pull-right">
+					</a>
 				</p>
 				<p class="text-center">
 					<br><br>
-					Via Emilio Gola 4,  Milano - 20143<br>
+					<a href="https://www.google.it/maps/place/Via+Emilio+Gola,+4,+20143+Milano/@45.4456308,9.1901226,15z/data=!4m2!3m1!1s0x4786c3f78fc6280f:0xb8178fc1d51db17c" target="_blank">
+						Via Emilio Gola 4, Milano - 20143
+					</a><br>
 					Tel: +39 02.83631695<br>
 					Cell: +39 340.5277352<br>
-					info@inkanto.eu / www.inkanto.eu<br>
+					<a href="mailto:info@inkanto.eu">info@inkanto.eu</a> / <a href="{{url()}}">www.inkanto.eu</a><br>
 					Lunedí chiuso
 				</p>
 			</section>
 			@else
+			<p class="visible-xs">
+				<br>
+				<a href="{{url()}}">
+					<img src="{{url('img/logo.png')}}" alt="" class="img-responsive pull-right">
+				</a>
+			</p>
 			<section class="cabecera hidden-xs">
 				<div class="container">
 					<h2 class="text-right">
@@ -147,10 +184,12 @@
 					</h2>
 					<div class="bienvenida">
 						<p>
-							<img src="{{url('img/logo.png')}}" alt="" class="img-responsive pull-right logo">
+							<a href="{{url()}}">
+								<img src="{{url('img/logo.png')}}" alt="" class="img-responsive pull-right logo">
+							</a>
 						</p>
 						<div class="clearfix"></div>
-						<p class="text-right">
+						<p class="menu text-right">
 							<a href="{{url('il-ristorante')}}">
 								IL RISTORANTE
 							</a><br>
@@ -175,12 +214,12 @@
 			</section>
 			@endif
 		</div>
-		<div class="container-fluid" role="main">
+		<div class="container-fluid fondo-blanco" role="main">
 			<div class="container principal">
 				@yield('contenido')
 			</div>
 		</div>
-		@if ($uri != '/')
+		@if ($uri != '/' && $uri != 'contatti')
 		<div class="container-fluid no-gutter">
 			<footer>
 				<p class="text-center">

@@ -15,7 +15,8 @@ body {
 	font-family:'TempusSansITC';
 	font-size:15px;
 	line-height:20px;
-	padding-top:166px;
+	letter-spacing:.85px;
+	padding-top:160px;
 	background-color:transparent;
 	background-image:url('../img/fondo.jpg');
 	background-repeat:no-repeat;
@@ -50,6 +51,10 @@ row.no-gutter > [class*='col-'] {
 	background-position:50% 50%;
 	height:450px
 }
+.contatti .cabecera {
+	background-position:50% bottom;
+	height:425px
+}
 .cabecera-responsive {
 	margin:40px 0
 }
@@ -80,18 +85,27 @@ h3 {
 .inicio h3 {
 	text-align:right
 }
+h4 {
+	font-size:30px
+}
+h4 small {
+	color:#fff;
+	font-size:70%
+}
 .bienvenida {
 	margin-top:125px;
 	width:268px
 }
 .bienvenida p,
-.bienvenida a {
+.bienvenida a,
+.bienvenida .menu a {
 	color:#875309
 }
 .bienvenida a {
 	text-decoration:none
 }
-.bienvenida a:hover {
+.bienvenida a:hover,
+.bienvenida .menu a:hover {
 	color:#fff
 }
 h3 a, h3 a:hover {
@@ -102,7 +116,7 @@ h3 a, h3 a:hover {
 	margin-top:46px
 }
 footer p {
-	margin:30px 0
+	margin:40px 0
 }
 footer a:hover {
 	color:#875309;
@@ -111,10 +125,60 @@ footer a:hover {
 	width:100%;
 	height:560px;
 }
+p.big {
+	font-size:22px
+}
+.bx-wrapper .bx-pager {
+	bottom:-95px
+}
+.bx-wrapper .bx-pager a {
+	border:solid #ccc 1px;
+	display:block;
+	margin:0 5px;
+	padding:3px
+}
+.bx-wrapper .bx-pager a:hover,
+.bx-wrapper .bx-pager a.active {
+	border:solid #5280DD 1px
+}
+.bx-wrapper {
+	margin-bottom: 120px
+}
+.submit-form {
+	background-color:#b5915b;
+	color:#faf3ed;
+	font-size:24px;
+	line-height:32px;
+	border:none
+}
+.contatti p,
+.contatti a {
+	color:#310c02
+}
+.contatti a:hover {
+	color:#875309
+}
+.contatti .fondo-blanco {
+	background-color:#fff
+}
+.contatti #map {
+	height:320px;
+	margin-bottom:40px
+}
+.contatti h4 {
+	color:#f76139
+}
+.contatti label {
+	color:#898989
+}
+.contatti .submit-form {
+	background-color:#f76139;
+	color:#fff
+}
 
 @media (max-width:1199px) {
 	body.inicio, .cabecera {
-		background-position:25% 50%;
+		background-position:25% 50%
 	}
 }
 @media (max-width:767px) {

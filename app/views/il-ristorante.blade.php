@@ -1,19 +1,4 @@
 @extends('layouts.master')
-@section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script>
-	function initialize() {
-		var mapCanvas = document.getElementById('map');
-		var mapOptions = {
-			center: new google.maps.LatLng(45.449034, 9.176668),   //,,19z
-			zoom: 19,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		}
-		var map = new google.maps.Map(mapCanvas, mapOptions)
-	}
-	google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-@stop
 @section('contenido')
 <div class="row">
 	<div class="col-sm-11 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-8 col-lg-offset-2">
