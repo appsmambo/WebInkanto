@@ -39,20 +39,6 @@
 		<![endif]-->
 		<script src="http://www.inkanto.eu/staging/js/jquery.min.js"></script>
 		<script src="http://www.inkanto.eu/staging/js/bootstrap.min.js"></script>
-				<script src="https://maps.googleapis.com/maps/api/js"></script>
-		<script>
-			function initialize() {
-				var mapCanvas = document.getElementById('map');
-				var mapOptions = {
-					center: new google.maps.LatLng(45.449034, 9.176668),
-					zoom: 19,
-					scrollwheel: false,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				}
-				var map = new google.maps.Map(mapCanvas, mapOptions)
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);
-		</script>
 						<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -62,7 +48,7 @@
 			ga('send', 'pageview');
 		</script>
 	</head>
-	<body class="il-ristorante">
+	<body class="inicio">
 		<h1 class="hidden">cucina peruviana</h1>
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
@@ -74,7 +60,7 @@
 		}(document, 'script', 'facebook-jssdk'));</script>
 		<ul class="idioma">
 			<li>
-				<a href="#">
+				<a href="http://www.inkanto.eu/staging/en">
 					ITA
 				</a>
 			</li>
@@ -82,7 +68,7 @@
 				|
 			</li>
 			<li>
-				<a href="http://www.inkanto.eu/staging/en">
+				<a href="#">
 					ENG
 				</a>
 			</li>
@@ -100,44 +86,44 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li>
-							<a href="http://www.inkanto.eu/staging">
-								HOME
-							</a>
-						</li>
 						<li class="active">
-							<a href="http://www.inkanto.eu/staging/il-ristorante.html">
-								IL RISTORANTE <span class="sr-only">(current)</span>
+							<a href="http://www.inkanto.eu/staging/en">
+								HOME <span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/la-cucina-peruviana.html">
-								LA CUCINA PERUVIANA
+							<a href="http://www.inkanto.eu/staging/en/about.html">
+								ABOUT
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/il-menu.html">
-								IL MENÚ
+							<a href="http://www.inkanto.eu/staging/en/peruvian-cuisine.html">
+								PERUVIAN CUISINE
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/gallery.html">
+							<a href="http://www.inkanto.eu/staging/en/menu.html">
+								MENU
+							</a>
+						</li>
+						<li>
+							<a href="http://www.inkanto.eu/staging/en/gallery.html">
 								GALLERY
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/prenota.html">
-								PRENOTA
+							<a href="http://www.inkanto.eu/staging/en/book-a-table.html">
+								BOOK A TABLE
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/contatti.html">
-								CONTATTI
+							<a href="http://www.inkanto.eu/staging/en/contact.html">
+								CONTACT
 							</a>
 						</li>
 						<li>
-							<a href="http://www.inkanto.eu/staging/en">
-								ENGLISH
+							<a href="http://www.inkanto.eu/staging">
+								ITALIAN
 							</a>
 						</li>
 					</ul>
@@ -145,100 +131,56 @@
 			</div>
 		</nav>
 		<div class="container-fluid no-gutter">
-						<p class="visible-xs">
-				<br>
-				<a href="http://www.inkanto.eu/staging">
-					<img src="http://www.inkanto.eu/staging/img/logo.png" alt="" class="img-responsive center-block">
-				</a>
-			</p>
-			<section class="cabecera hidden-xs">
+						<section class="cabecera hidden-xs">
 				<div class="container">
 					<h2 class="text-right">
 						RISTORANTE PERUVIANO
 					</h2>
 					<div class="bienvenida">
 						<p>
-							<a href="http://www.inkanto.eu/staging">
+							<a href="http://www.inkanto.eu/staging/en">
 								<img src="http://www.inkanto.eu/staging/img/logo.png" alt="" class="img-responsive pull-right logo">
 							</a>
 						</p>
 						<div class="clearfix"></div>
-						<p class="menu text-right">
-							<a href="http://www.inkanto.eu/staging/il-ristorante.html">
-								IL RISTORANTE
+						<p class="text-right">
+							<a href="https://www.google.it/maps/place/Via+Emilio+Gola,+4,+20143+Milano/@45.4456308,9.1901226,15z/data=!4m2!3m1!1s0x4786c3f78fc6280f:0xb8178fc1d51db17c" target="_blank">
+								Via Emilio Gola 4, Milano - 20143
 							</a><br>
-							<a href="http://www.inkanto.eu/staging/la-cucina-peruviana.html">
-								LA CUCINA PERUVIANA
-							</a><br>
-							<a href="http://www.inkanto.eu/staging/il-menu.html">
-								IL MENÚ
-							</a><br>
-							<a href="http://www.inkanto.eu/staging/gallery.html">
-								GALLERY
-							</a><br>
-							<a href="http://www.inkanto.eu/staging/prenota.html">
-								PRENOTA
-							</a><br>
-							<a href="http://www.inkanto.eu/staging/contatti.html">
-								CONTATTI
-							</a><br>
+							Tel: +39 02.83631695<br>
+							Cell: +39 340.5277352<br>
+							<a href="mailto:info@inkanto.eu">info@inkanto.eu</a> / <a href="http://www.inkanto.eu/staging">www.inkanto.eu</a><br>
+							Lunedí chiuso
 						</p>
 					</div>
 				</div>
 			</section>
-					</div>
-		<div class="container-fluid fondo-blanco" role="main">
-			<div class="container principal">
-				<div class="row">
-	<div class="col-sm-11 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-8 col-lg-offset-2">
-		<div class="row">
-			<div class="col-sm-6 col-md-7">
-				<p class="text-right">
-					Il ristorante nasce nel 2009 dal sogno di due peruviani, Sheilla e Cesar, con l'obiettivo di diffondere la cucina peruviana in Italia.
-				</p>
-				<p class="text-right">
-					Siamo professionisti nel campo della ristorazione e gestiamo responsabilmente i nostri prodotti, aderendo ad elevati standard di manipolazione degli alimenti e l'uso di ingredienti di prima qualità.
-				</p>
-				<p class="text-right">
-					Rispettiamo l'originalità delle ricette riproponendo fedelmente i nostri piatti come vuole la tradizione peruviana ma aggiungiamo anche un pizzico di innovazione introducendo ingredienti nuovi per creazioni culinarie che soddisfino i gusti dei nostri ospiti.
-				</p>
-				<p class="text-right">
-					Ci impegniamo al 100% per soddisfare le nostre.
-				</p>
-			</div>
-			<div class="col-sm-6 col-md-5">
+			<section class="container cabecera-responsive visible-xs">
 				<p>
-					<img src="http://www.inkanto.eu/staging/img/il-restorante.jpg" alt="" class="pull-left img-responsive">
+					<a href="http://www.inkanto.eu/staging/en">
+						<img src="http://www.inkanto.eu/staging/img/logo.png" alt="" class="img-responsive center-block">
+					</a>
 				</p>
-			</div>
-		</div>
-	</div>
-</div>
-			</div>
-		</div>
-				<div class="container-fluid no-gutter">
-			<footer>
 				<p class="text-center">
-					ORARI DI APERTURA<br>
-					Lunedì Chiuso.<br>
-					Dal martedì al Giovedì dalle 18 alle 24<br>
-					Venerdì dalle 18 all' 1<br>
-					SABATO (Pranzo) dalle 12 alle 14:30<br>
-					SABATO (Cena) dalle 18 all'1<br>
-					DOMENICA dalle 11 alle 17
-				</p>
-				<div id="map"></div>
-				<p class="text-center">
+					<br><br>
 					<a href="https://www.google.it/maps/place/Via+Emilio+Gola,+4,+20143+Milano/@45.4456308,9.1901226,15z/data=!4m2!3m1!1s0x4786c3f78fc6280f:0xb8178fc1d51db17c" target="_blank">
-						Via Emilio Gola, 4 Milano 20143
+						Via Emilio Gola 4, Milano - 20143
 					</a><br>
 					Tel: +39 02.83631695<br>
 					Cell: +39 340.5277352<br>
-					E-mail: <a href="mailto:info@inkanto.eu">
-						info@inkanto.eu
-					</a>
+					<a href="mailto:info@inkanto.eu">info@inkanto.eu</a> / <a href="http://www.inkanto.eu/staging">www.inkanto.eu</a><br>
+					Lunedí chiuso
 				</p>
-			</footer>
+			</section>
+					</div>
+		<div class="container-fluid fondo-blanco" role="main">
+			<div class="container principal">
+				<h3>
+	<a href="http://www.inkanto.eu/staging/en/about.html">
+		Discover It! <img src="http://www.inkanto.eu/staging/img/boton.png" alt="">
+	</a>
+</h3>
+			</div>
 		</div>
 			</body>
 </html>
